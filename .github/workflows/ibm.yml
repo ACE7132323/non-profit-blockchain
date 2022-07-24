@@ -20,7 +20,7 @@ env:
   IBM_CLOUD_REGION: us-south
   ICR_NAMESPACE: ${{ secrets.ICR_NAMESPACE }}
   REGISTRY_HOSTNAME: us.icr.io
-  IMAGE_NAME: iks-test
+  IMAGE_NAME: iks
   IKS_CLUSTER: example-iks-cluster-name-or-id
   DEPLOYMENT_NAME: iks-test
   PORT: 5001
@@ -37,7 +37,7 @@ jobs:
 
     # Download and Install IBM Cloud CLI
     - name: Install IBM Cloud CLI
-      run: |
+      run:iks:1
         curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
         ibmcloud --version
         ibmcloud config --check-version=false
